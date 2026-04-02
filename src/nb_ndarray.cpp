@@ -380,7 +380,7 @@ static mt_unique_ptr_t make_mt_from_buffer_protocol(PyObject *o, bool ro) {
     if (skip_first && format_str)
         format_c = *++format_str;
 
-    bool is_complex = format_str[0] == 'Z';
+    bool is_complex = format_str && format_str[0] == 'Z';
     if (is_complex)
         format_c = *++format_str;
 
