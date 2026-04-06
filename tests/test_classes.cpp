@@ -202,7 +202,7 @@ NB_MODULE(test_classes_ext, m) {
     cls.attr("class_method") =
         nb::module_::import_("builtins").attr("classmethod")(
             nb::cpp_function(
-                [](nb::handle cls, int value) -> int { return value * 2; },
+                [](nb::handle, int value) -> int { return value * 2; },
                 "cls"_a, "value"_a = 0,
                 "A classmethod that wraps a nanobind function."));
 
