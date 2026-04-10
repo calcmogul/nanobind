@@ -288,8 +288,6 @@ C++11-style strongly typed enumerations.
    my_ext.Kind.Cat
    >>> p.type.__name__
    'Cat'
-   >>> int(p.type)
-   1
 
 .. note::
 
